@@ -1,0 +1,19 @@
+{
+  "name": "Python with Anaconda & JupyterLab (v0.205)",
+  "image": "mcr.microsoft.com/vscode/devcontainers/anaconda:0.205-3",
+
+  "features": {
+    "ghcr.io/devcontainers/features/conda:1": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-toolsai.jupyter",
+        "ms-python.python"
+      ]
+    }
+  },
+
+  "postCreateCommand": "conda install -y jupyterlab ipykernel && conda clean -afy"
+}
